@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,5 +30,6 @@ use Illuminate\Support\Facades\Route;
 //});
 Route::get('/',[UserController::class,'index']);
 Route::get('/users',[UserController::class,'index']);
+Route::get('/tasks',[App\Http\Controllers\TaskController::class,'index']);
 Route::get('/contact',[PagesController::class,'contact']);
 Route::get('/about',[PagesController::class,'about']);
